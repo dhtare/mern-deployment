@@ -1,0 +1,281 @@
+/*** Feedback Form ***/
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+
+.feedback-form h2 {
+  margin-bottom: 20px;
+  font-size: 28px; 
+}
+
+.feedback-form label {
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  max-width: 100%;
+  resize: none;
+  margin-top: 10px;
+}
+
+.form-section {
+  margin: 10px;
+  margin-top: 30px;
+}
+
+.submit-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  width: 250px;
+  margin-top: 20px;
+  background-color: #003366;
+  color: white;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.submit-button:hover {
+  background-color: #00a9ea;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .feedback-form {
+      padding: 10px;
+  }
+
+  .feedback-form h2 {
+      font-size: 24px;
+  }
+
+  .feedback-form label {
+      font-size: 16px;
+  }
+
+  .submit-button {
+      width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-form h2 {
+      font-size: 20px;
+  }
+
+  .feedback-form label {
+      font-size: 14px;
+  }
+
+  .feedback-form textarea {
+      font-size: 14px;
+  }
+}
+
+/*** Login Page ***/
+.login-page {
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95.5vh;
+}
+
+.login-form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px; /* Limit max width for better aesthetics */
+  box-sizing: border-box;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button.close-button:hover{
+  background-color: transparent;
+}
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  body {
+      padding: 10px;
+  }
+  
+  .login-form-container {
+      padding: 15px;
+      width: 95%;
+  }
+}
+
+@media (max-width: 400px) {
+  .login-form-container {
+      width: 100%;
+  }
+  
+  input[type="email"],
+  input[type="password"],
+  button {
+      font-size: 14px;
+  }
+}
+
+
+/*** Popup Overlay and Content ***/
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; 
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 550px; 
+  max-height: 80vh; 
+  overflow-y: auto; 
+  position: relative; 
+}
+
+/*** Close Button ***/
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-button:hover {
+  color: #000 !important; 
+}
+
+/*** Form Styling ***/
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; 
+}
+
+.form-section {
+  margin: 10px 0;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left; 
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+/*** Button Container ***/
+.button-container {
+  display: flex;
+  justify-content: space-between; 
+  margin-top: 15px;
+}
+
+.button-container button {
+  padding: 10px;
+  border: none;
+  /* border-radius: 30px !important; */
+  background-color: #003366;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  flex: 1; 
+  margin: 0 5px; 
+}
+
+.button-container button:hover {
+  background-color: #00a9ea; 
+}
+
+.button-container button.close-button:hover {
+  background-color: #ccc;
+}
+.button-container .cancel-button {
+  background-color: #aaa; 
+}
+
+.button-container .cancel-button:hover {
+  background-color: grey; 
+}
+
+/*** Message Display ***/
+.popup-content p, .popup-content h4 {
+  margin-top: 20px; 
+  color: #000; 
+}
+
+p.success-message {
+  color: green !important;
+}
+/* Media Queries for Responsiveness */
+@media (max-width: 480px) {
+  .popup-content {
+    width: 90%;
+  }
+}

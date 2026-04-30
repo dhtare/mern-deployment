@@ -1,0 +1,109 @@
+.dashboard-container {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.metrics-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.metrics-card p {
+  font-size: x-large;
+}
+
+.cart-title {
+font-size: 16px;
+font-weight: 600;
+}
+
+.chart-container {
+  padding: 10px; 
+
+}
+
+.chart-section.row1{
+  margin-top: 20px;
+}
+
+.gauge-chart {
+  display: flex;
+  justify-content: center;
+}
+
+
+.nav-tabs .nav-link {
+  border: none;
+  position: relative; 
+}
+
+.nav-link.active {
+  border-bottom: 2px solid #007bff; 
+}
+
+
+.nav-link:not(.active) {
+  border-bottom: none; 
+}
+
+.chart-section {
+  padding: 20px;
+}
+
+
+.custom-tabs {
+  display: flex;
+  justify-content: center; 
+}
+
+.nav-tabs {
+  flex-grow: 1; 
+}
+
+.nav-tabs .nav-link {
+  margin: 0 10px; 
+}
+
+.nav-tabs .nav-link {
+  border: none;
+}
+
+.nav-tabs .nav-link.active {
+  border-bottom: 2px solid #007bff !important; 
+  color: #007bff !important;
+  background-color: transparent !important; 
+  border-top:none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+  border-top:none !important;
+  border-left: none !important;
+  border-right: none !important;
+  background-color: transparent !important; 
+}
+
+.nav-tabs .nav-link {
+  border: none !important;
+  
+}
+
+.nav-tabs .nav-link:not(.active) {
+  color: #000; 
+}
+
+
+@media (max-width: 768px) {
+  .metrics-card {
+    margin-bottom: 15px;
+  }
+
+  .chart-container {
+    margin-bottom: 15px;
+  }
+}

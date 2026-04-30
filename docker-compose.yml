@@ -1,0 +1,27 @@
+services:
+  # Database
+  database:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  # Backend
+  backend:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGODB_URI=mongodb://database:27017/MERN
+      - SHORT_IO_API_KEY=sk_uhTCl8Tf0uNFqdnk
+    depends_on:
+      - database
+
+  # Frontend
+  frontend:
+    build: ./feedback-frontend
+    ports:
+      - "80:3000"
+    depends_on:
+      - backend
