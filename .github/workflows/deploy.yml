@@ -16,4 +16,4 @@ jobs:
           script: |
             cd ~/mern-deployment
             git pull origin main
-            docker-compose up --build -d
+            sudo docker compose up --build -d
